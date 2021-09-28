@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1>Inventory</h1>
+</head>
+
+<body>
+    <script>
+        function append(){
+            Item_catagory = document.getElementById("tg").value; 
+            Item_name = document.getElementById("In").value;
+            Quantity = document.getElementById("Out").value; 
+            let name = "Product Name: " + Item_name
+            document.getElementById("result1").innerHTML = name;
+            let items = "Item Catagory: " + Item_catagory
+            document.getElementById("result2").innerHTML = items;
+            let quntites = "Quantity: " + Quantity
+            document.getElementById("result3").innerHTML = quntites;
+         
+        }
+        </script>
+
+    Item Name <br><br>
+    <input type="text" id="In"><br><br>
+    Item catagory <br><br>
+    <input type="text" id="tg"><br> <br>
+    Quantity <br><br>
+    <input type="text" id="Out"><br> <br>
+    
+    
+    <button type="button" onclick="append()">append</button>
+    <div id="result1"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+</body>
+</html>
