@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+=<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,7 @@ function addAll(){
     FirstValue = +document.getElementById("in").value;
     SecondValue = +document.getElementById("out").value;
     let sum = FirstValue + SecondValue;
-    document.getElementById("gt").innerHTML = '+';
+    document.getElementById("gt").innerHTML = sum;
 }
 function mult(){
     FirstValue = +document.getElementById("in").value;
@@ -34,9 +34,9 @@ FirstValue = +document.getElementById("in").value;
     SecondValue <br><br>
     <input type="text" id="out"><br> <br>
     
-    <button type="button" onclick="addAll()">click to add</button>
-    <button type="button" onclick="mult()">click to multiplay</button>
-    <button type="button" onclick="subst()">click to substract</button>
+    <button type="button" onclick="addAll()">+</button>
+    <button type="button" onclick="mult()">*</button>
+    <button type="button" onclick="subst()">-</button>
     <div id="gt"></div>
     
 </body>
