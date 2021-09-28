@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+function addAll(){
+    FirstValue = +document.getElementById("in").value;
+    SecondValue = +document.getElementById("out").value;
+    let sum = FirstValue + SecondValue;
+    document.getElementById("gt").innerHTML = '+';
+}
+function mult(){
+    FirstValue = +document.getElementById("in").value;
+    SecondValue = +document.getElementById("out").value;
+    let mult = FirstValue * SecondValue;
+    document.getElementById("gt").innerHTML = mult;
+
+}
+function subst(){
+FirstValue = +document.getElementById("in").value;
+    SecondValue = +document.getElementById("out").value;
+    let subst = FirstValue - SecondValue;
+    document.getElementById("gt").innerHTML = subst;
+}
+
+</script>
+<body>
+    FirstValue <br><br>
+    <input type="text" id="in"><br><br>
+    SecondValue <br><br>
+    <input type="text" id="out"><br> <br>
+    
+    <button type="button" onclick="addAll()">click to add</button>
+    <button type="button" onclick="mult()">click to multiplay</button>
+    <button type="button" onclick="subst()">click to substract</button>
+    <div id="gt"></div>
+    
+</body>
+</html>
