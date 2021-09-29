@@ -1,27 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<script>
-function add(){
-    Input = +document.getElementById("In").value; 
-    Output = +document.getElementById("Out").value; 
-    let sum = Input + Output;
-    document.getElementById("sume").innerHTML = sum;
-    
+<script language="javascript" type="text/javascript">
+function addin() 
+{
+      let mytext = document.myform.myinput.value; 
+      document.myform.myoutput.value += mytext; 
+      document.myform.myinput.value = ""; 
 }
 </script>
+</head>
 <body>
-    Input <br><br>
-    <input type="text" id="In"><br><br>
-    Output <br><br>
-    <input type="text" id="Out"><br> <br>
-    
-    <button type="button" onclick="add()">click to add</button>
-    <div id="sume"></div>
+<form name="myform">
+Input</p>
+<input type="text" id="myinput"/></p>
+Output</p>
+<textarea id="myoutput"></textarea></p>
+<input type="button" value="Click" onClick="addin()">
+</form>
 </body>
 </html>
