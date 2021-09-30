@@ -1,40 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <h1>Inventory</h1>
+  <script>
+    let obj=[]
+    function myAddToList() {
+      let productName=document.getElementById("itemName").value
+      let category = document.getElementById("itemCatagory").value
+      let quanitity = document.getElementById("quanitity").value
+      let mytabele=document.getElementById("myobject")
+      let row= document.createElement('tr')
+
+      let newobj={
+        productName:productName,
+        category:category,
+        quanitity:quanitity
+      }
+      if(productName!='' && category!=''&& (typeof quanitity!="number"))
+      {
+
+
+      obj.push(newobj)
+      console.log(obj)
+      let x = document.createElement('td')
+      x.innerText = productName
+      let y = document.createElement('td')
+      y.innerText=category
+      let z = document.createElement('td')
+      z.innerText += quanitity
+      // row.innerText+=x
+      row.appendChild(x)
+      row.appendChild(y)
+      row.appendChild(z)
+        console.log(row)
+
+      mytabele.appendChild(row)
+      document.getElementById("itemName").value=''
+       document.getElementById("itemCatagory").value=''
+       document.getElementById("quanitity").value=''
+      // alert(productName + category + quanitity)
+
+      }
+      else{
+        alert("empty field is not aaccpeted")
+      }
+
+
+    }
+
+
+  </script>
 </head>
 
 <body>
-    <script>
-        function append(){
-            Item_catagory = document.getElementById("tg").value; 
-            Item_name = document.getElementById("In").value;
-            Quantity = document.getElementById("Out").value; 
-            let name = "Product Name: " + Item_name
-            document.getElementById("result1").innerHTML = name;
-            let items = "Item Catagory: " + Item_catagory
-            document.getElementById("result2").innerHTML = items;
-            let quntites = "Quantity: " + Quantity
-            document.getElementById("result3").innerHTML = quntites;
-         
-        }
-        </script>
+  <h2><b> Inventory </b></h2>
+  <div class="myInven">
+    Item Name</p>
+    <input type="text" id="itemName"  /></p>
+    Item Catagory</p>
+    <input type="text" id="itemCatagory" /></p>
+    Quantity</p>
+    <input type="text" id="quanitity" /></p>
 
-    Item Name <br><br>
-    <input type="text" id="In"><br><br>
-    Item catagory <br><br>
-    <input type="text" id="tg"><br> <br>
-    Quantity <br><br>
-    <input type="text" id="Out"><br> <br>
-    
-    
-    <button type="button" onclick="append()">append</button>
-    <div id="result1"></div>
-    <div id="result2"></div>
-    <div id="result3"></div>
-</body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <input type="button" value="Add" onClick="myAddToList()">
+  </div>
+  <select name="" id="">
+    <option value="ff">sort</option>
+    <option value="ff">sort</option>
+  </select>
+  <table  border="1">
+    <thead>
+      <th>productName</th>
+      <th>category</th>
+      <th>Quantity</th>
+<th>description</th>
+<th>Action</th>
+    </thead>
+    <tbody id="myobject">
+      <tr>
+        <td>tv</td>
+
+        <td>elecronic</td>
+
+        <td>100</td>
+        <td>ggggggggggggggggggggggggggggg</td>
+        <td><button>edit</button><button>delete</button></td>
+
+
+      </tr>
+
+    </tbody>
+  </table></body>
+
 </html>
