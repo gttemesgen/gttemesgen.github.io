@@ -1,96 +1,181 @@
+
+
 <!DOCTYPE html>
 <html>
-
 <head>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <h1>Inventory</h1>
+  <div>
+    <p>
+      Item Name: &nbsp; &nbsp; &nbsp;
+      <input type="text" value="" id="itemName" />
+    </p>
+    <p>
+      Item Category: &nbsp;
+      <input type="text" value="" id="category" />
+    </p>
+    <p>
+      Quantity: &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+      <input type="number" value="" id="quantity" />
+    </p>
+    <p>
+      <input type="submit" value="Add" class="addButton" onclick="add()" />
+    </p>
+    <input type="submit" value="filter" onclick="filter()" />
+    <input type="submit" value="Clear Filter" onclick="clearFilter()" />
+    <input type="submit" value="Rating" onclick="rating()" />
+    <br/>
+  </div>
+  <table id="items">
+    <tr>
+      <th>Product Name</th>
+      <th>Category</th>
+      <th>Quantity</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </table>
   <script>
-    let obj=[]
-    function myAddToList() {
-      let productName=document.getElementById("itemName").value
-      let category = document.getElementById("itemCatagory").value
-      let quanitity = document.getElementById("quanitity").value
-      let mytabele=document.getElementById("myobject")
-      let row= document.createElement('tr')
+    let arr = [];
+    let index = 0;
 
-      let newobj={
-        productName:productName,
-        category:category,
-        quanitity:quanitity
+    function add() {
+      index++;
+      let item = {
+        id: index, name: document.getElementById("itemName").value,
+        category: document.getElementById("category").value,
+        quantity: document.getElementById("quantity").value
+      };
+      arr.push(item);
+
+
+      let items = document.getElementById("items");
+      let tr = document.createElement("tr");
+      items.append(tr);
+      let nameTd = document.createElement("td");
+      nameTd.innerHTML = document.getElementById("itemName").value;
+      tr.append(nameTd);
+
+      let categoryTd = document.createElement("td");
+      categoryTd.innerHTML = document.getElementById("category").value;
+      tr.append(categoryTd);
+
+      let quantityTd = document.createElement("td");
+      quantityTd.innerHTML = document.getElementById("quantity").value;
+      tr.append(quantityTd);
+
+      //<tr> <td><button>Edit</button></td>
+      let editTd = document.createElement("td");
+      let button = document.createElement("button");
+      button.innerHTML = "Edit";
+      button.setAttribute("myId", index);
+      button.onclick = function () {
+        console.log(this)//button
+        console.log(this.parentNode)//td
+        console.log(this.parentNode.parentNode)//tr
+        console.log(this.parentNode.parentNode.childNodes)// All 5 columns(td's)
+        let childNodes = this.parentNode.parentNode.childNodes;
+
+        document.getElementById("itemName").value = childNodes[0].innerHTML;
+        document.getElementById("category").value = childNodes[1].innerHTML;
+        document.getElementById("quantity").value = childNodes[2].innerHTML;
+
+        let myId = this.getAttribute("myId");
+        arr.forEach(function (item) {
+          if (item.id == myId) {
+            item.name = document.getElementById("itemName").value;
+            item.category = document.getElementById("category").value;
+            item.quantity = document.getElementById("category").value;
+          }
+        })
+
       }
-      if(productName!='' && category!=''&& (typeof quanitity!="number"))
-      {
+      editTd.append(button);
+      tr.append(editTd);
 
+      let td = document.createElement("td");
+      let deleteButton = document.createElement("button");
+      button.setAttribute("myId", index);
+      deleteButton.innerHTML = "Delete";
+      deleteButton.onclick = function () {
+        let myId = this.getAttribute("myId")
+        console.log(this.getAttribute("myId"));
+        arr = arr.filter((item) => item.id != myId);
 
-      obj.push(newobj)
-      console.log(obj)
-      let x = document.createElement('td')
-      x.innerText = productName
-      let y = document.createElement('td')
-      y.innerText=category
-      let z = document.createElement('td')
-      z.innerText += quanitity
-      // row.innerText+=x
-      row.appendChild(x)
-      row.appendChild(y)
-      row.appendChild(z)
-        console.log(row)
-
-      mytabele.appendChild(row)
-      document.getElementById("itemName").value=''
-       document.getElementById("itemCatagory").value=''
-       document.getElementById("quanitity").value=''
-      // alert(productName + category + quanitity)
+        console.log(this.parentNode.parentNode);
+        this.parentNode.parentNode.remove();
 
       }
-      else{
-        alert("empty field is not aaccpeted")
-      }
-
-
+      td.append(deleteButton);
+      tr.append(td);
     }
 
+    function filter() {
+      console.log(arr);
+      let filteredArray = arr.filter((item) => Number(item.quantity) > 100);
+      let children = document.getElementById('items').childNodes;
+      for (let i = 2; i < children.length; i++) {
+        let eachTr = children[i];
+        console.log(eachTr.children[2]);
+        if (Number(eachTr.children[2].innerHTML) < 100) {
+          eachTr.style.display = "none";
+        }
 
+      }
+    }
+
+    function clearFilter() {
+      console.log(arr);
+      let filteredArray = arr.filter((item) => Number(item.quantity) > 100);
+      let children = document.getElementById('items').childNodes;
+      for (let i = 2; i < children.length; i++) {
+        let eachTr = children[i];
+        console.log(eachTr.children[2]);
+        eachTr.style.display = "";
+      }
+
+    }
   </script>
-</head>
-
-<body>
-  <h2><b> Inventory </b></h2>
-  <div class="myInven">
-    Item Name</p>
-    <input type="text" id="itemName"  /></p>
-    Item Catagory</p>
-    <input type="text" id="itemCatagory" /></p>
-    Quantity</p>
-    <input type="text" id="quanitity" /></p>
-
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-    <input type="button" value="Add" onClick="myAddToList()">
-  </div>
-  <select name="" id="">
-    <option value="ff">sort</option>
-    <option value="ff">sort</option>
-  </select>
-  <table  border="1">
-    <thead>
-      <th>productName</th>
-      <th>category</th>
-      <th>Quantity</th>
-<th>description</th>
-<th>Action</th>
-    </thead>
-    <tbody id="myobject">
-      <tr>
-        <td>tv</td>
-
-        <td>elecronic</td>
-
-        <td>100</td>
-        <td>ggggggggggggggggggggggggggggg</td>
-        <td><button>edit</button><button>delete</button></td>
-
-
-      </tr>
-
-    </tbody>
-  </table></body>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script></body>
 
 </html>
+
