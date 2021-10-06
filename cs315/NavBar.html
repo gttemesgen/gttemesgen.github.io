@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            background-color:  #222;
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 300;
+        }
+        .container{
+            width: 80%;
+            margin: 0 auto;
+            border: 10px;
+        }
+        header{
+            background-color: #55d6aa;
+        }
+        .logo{
+            float: left;
+            border-top: 5px;
+        }
+        header::after{
+            content: '';
+            display: table;
+            clear: both;
+
+        }
+        nav{
+            float: right;
+        }
+        nav ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        nav li{
+            display: inline;
+            margin-left: 70px;
+            padding-top: 23px;
+            position: relative;
+        }
+        nav a{
+            color: #444;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        
+        nav a:hover{
+            color: #000;
+        }
+        nav a::before{
+            content: '';
+            display: block;
+            height: 5px;
+            width: 100%;
+            background-color: #444;
+            position: absolute;
+            top: 0px;
+            width: 0%;
+            transition: alleas-in-out 250ms;
+        }
+
+         
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJN5Wgwx3CLpR9yCS_h3n4NZvn54V0xFsB_I6LRSDDfqxCZZFEB6eY_sTAI-dbEzwAl9E&usqp=CAU" alt="logo" class="logo">
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+        </div>
+    </header>
+    
+</body>
+</html>
