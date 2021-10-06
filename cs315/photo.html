@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="navbar2.css"> -->
+    <title>Responsive Navbar</title>
+    <style>
+        ow {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .img {
+    height: 50%;
+    margin: 10px;
+    box-shadow: 10px 14px 20px 0px rgba(226,204,189,1);
+  }
+  .img-1{
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlMhPXu9_M98xUgl_0xoQSfNUTUucgZgJ-Qw&usqp=CAU) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    
+  }
+  .img-2{
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnpJpCK_CCqmioCbw-V4_lBlpQugfujoS3vg&usqp=CAU) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+  }
+  .img-3{
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRBbwZYjLECruECmkrvUGEDvZy1RkEcAGW-Q&usqp=CAU) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    
+  }
+  .img-4 {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkxq508sRflBSFLWbE3S-figl5qh4Fx2ZBRw&usqp=CAU) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    
+  }
+  @media screen and (min-width: 800px) {
+    .row{
+      height: 600px; 
+    }
+    
+    .img{
+      height: 50%;  
+    }
+    
+    .img-1,
+    .img-4 {
+      width: 24%;
+    }
+    .img-2,
+    .img-3 {
+      width: 70%;
+    }
+  }
+  
+    </style>
+</head>
+<body>
+    <button onclick="one()">1</button>
+ <button onclick="two()">2</button>
+<button onclick="four()">4</button>
+
+    <div class="row">
+        
+            
+                <div class="img img-1"></div>
+                <div class="img img-2"></div>
+                <div class="img img-3"></div>
+                <div class="img img-4"></div>
+            </div>
+          
+      </div>
+    
+    
+</body>
+</html>
