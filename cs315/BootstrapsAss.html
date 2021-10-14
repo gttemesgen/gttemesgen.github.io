@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="ananymous"></script>
+    <link rel="stylesheet" href="">
+
+    <style>
+        .wrapper {
+            background-image: linear-gradient( to right rgb(0, 114, 66) 0%, rgb(4, 109, 91)100%);
+            color: grey;
+            font-size: 20px;
+            padding: 40px;
+        }
+        
+        form {
+            padding: 40px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        button {
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 40;
+            border-radius: 400px;
+        }
+        .thankYou{
+            padding:40px;
+            font-size: 32px;
+            text-align: center;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="title_container">
+                <h2>Responsive Registration Form</h2>
+            </div>
+            <div class="form-group row ">
+
+                <div class="col-lg-7">
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+                        <input type="email" name="email" class="form-control" placeholder="Email" required />
+                    </div>
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                        <input type="password" name="password" class="form-control" placeholder="Password" required />
+                    </div>
+                    <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                        <input type="password" name="password" class="form-control" placeholder="Re-type Password" required />
+                    </div>
+                    <div class="form-group row ">
+
+                        <div class="col-lg-5">
+                            <div class="col_half">
+                                <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                    <input type="text" name="name" class="form-control" placeholder="First Name" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5">
+                            <div lass class="col_half">
+                                <placeholder=c lass="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                                    <input type="text" name="name" class="form-control" placeholder="Last Name" required />
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="input_field radio_option">
+                <input type="radio" name="radiogroup1" id="rd1">
+                <label for="rd1">Male</label>
+                <input type="radio" name="radiogroup1" id="rd2">
+                <label for="rd2">Female</label>
+            </div>
+            <div class="input_field select_option">
+                <select>
+                  <option>Select a country</option>
+                  <option>USA </option>
+                  <option>India</option>
+                  <ption>South Africa </option>
+                  <option>Brazil</option>
+                </select>
+                <div class="select_arrow"></div>
+            </div>
+            <div class="input_field checkbox_option">
+                <input type="checkbox" id="cb1">
+                <label for="cb1">I agree with terms and conditions</label>
+            </div>
+            <div class="input_field checkbox_option">
+                <input type="checkbox" id="cb2">
+                <label for="cb2">I want to receive the newsletter</label>
+            </div>
+            <input type="button" value="submit" id="form" class="btn btn-primary btn-block btn-large" />
+            </form>
+            <div class="thankYou hidden">
+                Thank you for your feedback!
+            </div>
+            </form-group>
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+    <script>
+        const isValidPhone = (Email) => {
+                const form = "^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
+                return re.test(String(Email).toLocaleLowerCase());
+        };
+        const form = document.querySelector('form');
+        const thankYou = document.querySelector(".thank-you");
+        const nameInput = document.querySelector('input[name="name"]'
+    );
+    let isFormValid = false;
+    const validateInputs = () => {
+        nameInput.classList.remove("invalid");
+        nameInput.nextElementSibling.classList.add("hidden");
+        isFormValid = true;
+
+        if(!nameInput.value){
+            nameInput.classList.add("invalid");
+            nameInput.nextElementSibling.classList.remove('hidden')
+            isFormValid = false;
+        }
+    };
+
+    
+        form.addEventListener('submit', (e) =>{
+            e.preventDefault();
+            validateInputs();
+            if(isFormValid){
+                form.remove();
+                thankYou.classList.remove("hidden");
+            }
+            
+
+ 
+        });
+        nameInput.addEventListener("input", () =>{
+            validateInputs();
+        })
+
+
+             
+    </script>
+
+</body>
+
+</html
