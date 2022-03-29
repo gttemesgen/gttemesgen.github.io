@@ -1,0 +1,59 @@
+/* 
+css is hiriaricheal it chooses in certain ways
+&nbsp gives horizontal spacing
+<br> vertical pacing
+padding is inside space
+where as marign is outsoide space space between the elements
+border is in between of them
+what is the rmainig size is the contaaint 
+div is the bolck elemts is coming in to new line
+label , span are inline element
+inlinent element are not s=respecitng top and bottom rule but accebt the right and left rule
+
+ */
+
+body {
+    margin: 10px;
+    border: 5px solid;
+    padding: 40px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.biography {
+    color: blue;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+    padding: 5px;
+}
+
+.mood {
+    text-align: center;
+}
+
+
+.Happy {
+    vertical-align: bottom;
+}
