@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heml CRUD</title>
+    <style>
+       body>table {
+     width: 75%;
+ }
+
+ table {
+     border-collapse: collapse;
+ }
+
+ table.list {
+     width: 100%;
+ }
+
+ td,
+ th {
+     border: 2 px sodid blueviolet;
+     text-align: left;
+     padding: 8px;
+ }
+
+ tr:nth-child(even),
+ table.list thead>tr {
+     background-color: greenyellow;
+
+ }
+
+ input[type=text],
+ input[type=number] {
+     width: 100%;
+     padding: 12 px 20px;
+     margin: 8px 0;
+     display: inline-block;
+     border: 1px solid black;
+     border-radius: 4px;
+     box-sizing: border-box
+ }
+
+ input[type=submit] {
+
+     width: 90px;
+     background-color: yellowgreen;
+     background-color: aqua;
+     color: #000;
+     padding: 14px 20px;
+     margin: 8px 0;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+ }
+
+ form div.form-action-buttons {
+     text-align: right;
+ }
+
+ a {
+     cursor: pointer;
+     text-decoration: underline;
+     color: #0000 ee;
+     margin-right: 4 px;
+ }
+
+ label.validation-error {
+     color: red;
+     margin-left: 5 px;
+ }
+
+ .hide {
+     display: none
+ }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <form>
+            <div>
+              <label>Name</label>
+              <input type="text" name="fullName" id="nameId" />
+            </div>
+            <div>
+              <label>quintity</label>
+              <input type="text" name="quintity" id="quintityId" />
+            </div>
+            <div>
+              <label>catagory</label>
+              <input type="text" name="catagory" id="catagoryId" />
+            </div>
+            <div>
+            </div [class]="form-action-buttons">
+            <input type="submit" value="submit" />
+          </form>
+        </td>
+
+        <td>
+            <!-- secnd table -->
+            <table class="list">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>quintity</th>
+                        <th>catagory</th>
+                        <th></th>
+                    </tr>
+
+                </thead>
+            </table>
+
+        </td>
+      </tr>
+    </table>
+
+    <script src="app.js"></script>
+  </body>
+</html>
