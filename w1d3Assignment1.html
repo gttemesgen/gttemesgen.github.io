@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    
+  
+<p>Input</p>
+<input type="text" id="teinpt"/> <br><br>
+<input type="button" id="btn" value="Click" onClick="add()"> <br> <br>
+<p>Output</p>
+<textarea id="oupt"></textarea></p>
+
+    <p>Thank you have a good day</p>
+
+    <script>
+      let firstName = document.getElementById("firstName");
+alert(firstName);
+firstName.value = "Dula";
+
+let input = document.createElement("div");
+input.innerHTML = "girma";
+
+input.style.background = 'red';
+
+function add() {
+    let input = document.getElementById("teinpt").value;
+    document.getElementById("oupt").value += input;
+    document.getElementById("teinpt").value = "";
+
+
+
+    // let result = area.append(inid);
+}
+
+    </script>
+  </body>
+</html>
 
