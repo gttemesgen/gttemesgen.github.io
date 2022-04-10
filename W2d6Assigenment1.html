@@ -31,9 +31,30 @@
       }
       nav ul li a {
         text-decoration: none;
-        padding: 0 15px;
+        padding: 0 10px;
         font-weight: 700;
-        font-size: 0.9rem;
+        font-size: 0.5rem;
+      }
+   
+  body > main > nav:nth-child(2) > ul > a{
+  text-decoration: none;
+      }
+      ul{
+        background-color: black;
+      }
+      body > main > nav:nth-child(3) > ul,body > main > nav:nth-child(2) > ul,body > main > nav:nth-child(1) > ul{
+        background-color: black;
+      }
+      .btn{
+        display: flex;
+        flex-direction: left;
+        background-color: blue;
+        border-radius:30px ;
+       
+      }
+      body > main > nav:nth-child(2) > ul > li:nth-child(4) > a > button{
+        align-items: right;
+        text-align: left;
       }
     </style>
   </head>
@@ -41,24 +62,27 @@
     <main class="container">
       <!-- <img class="logo" src="/photo-1649431791015-964a6b255368.avif" alt="" /> -->
       <nav>
-        <ul class="links1">
+        <ul class="links">
           <li><a href="">services</a></li>
           <li><a href="">contacts</a></li>
           <li><a href="">About</a></li>
+          <li><a href=""><button class="btn">Bakery</button></a></li>
         </ul>
       </nav>
       <nav>
-        <ul class="links2">
+        <ul class="links"
           <li><a href="">services</a></li>
           <li><a href="">contacts</a></li>
           <li><a href="">About</a></li>
+          <li><a href=""><button class="btn">Bakery</button></a></li>
         </ul>
       </nav>
       <nav>
-        <ul class="links3">
+        <ul class="links">
           <li><a href="">services</a></li>
           <li><a href="">contacts</a></li>
           <li><a href="">About</a></li>
+          <li><a href=""><button class="btn">Bakery</button></a></li>
         </ul>
       </nav>
     </main>
