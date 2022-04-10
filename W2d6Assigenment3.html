@@ -1,1 +1,112 @@
-W2d6Assigenment3.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        /* border: 4px solid black; */
+        background-color: white;
+        display: flex;
+        width: 120vh;
+      }
+      .item {
+        flex: 1;
+        background-color: aqua;
+        /* border: 1px solid red; */
+        padding: 1em;
+        margin: 1em;
+      }
+      body > div > article:nth-child(3) > ul>li{
+        list-style: none;
+        text-decoration: none;
+        flex: start;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+      }
+      body > div > article:nth-child(3) > ul > li.lis{
+          display: flex;
+        flex: 1 100%;
+          flex-direction: column;
+          flex: 1;
+          float: left;
+      } 
+    .names{
+        display: flex;
+        list-style: none;
+         justify-content: center;
+        flex-direction: row;
+        padding: 2px;
+        width: auto;
+        justify-content: space-between;
+}
+ 
+ 
+.items{
+    justify-content: space-between;
+}
+      .block{
+          display: block;
+  width: 100%;
+  border: none;
+  background-color:white;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+      }  
+    
+          
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <article class="item">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
+          soluta!
+        </p>
+      </article>
+      <article class="item">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos neque
+          consectetur maiores nam, dignissimos fugiat quidem iste ad deleniti
+          ea?
+        </p>
+      </article>
+      <article class="item">
+          <div class="names">
+        
+            <li class="lis" " >
+               <li class="item1"><button>Smile</button></li>
+                <li class="item1"><button>Laugh</button></li>
+                 <li class="item1"><button>Wink</button></li>
+                  <li class="item1"><button>Shrug</button></li>
+                   <li class="item1"><button>Blush</button></li>
+            </li>
+ </div>
+ <button type="button" class="block">Button</button>
+        
+        
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+          voluptatem, laboriosam explicabo dolorum assumenda quae, dolores
+          quidem deserunt quibusdam tempore expedita qui veritatis accusamus at
+          nostrum? Id molestiae aliquid cumque!
+        </p>
+        
+      </article>
+    </div>
+  </body>
+</html>
+
