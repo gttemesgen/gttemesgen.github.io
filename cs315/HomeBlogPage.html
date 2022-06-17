@@ -1,1 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <style>
+            
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 30px;
+    text-align: center;
+    background-image: url(../images/20509677.jpeg);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+.searchTerm:focus {
+    color: #00B4CC;
+    justify-content: right;
+}
+
+.lists {
+
+    display: flex;
+}
+            .section {
+
+    text-decoration: none !important;
+    list-style-type: none;
+    justify-content: space-around;
+    padding: 10px;
+
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: burlywood;
+    grid-area: footer;
+    padding: 20px;
+    border: 2px solid black;
+    justify-content: space-between;
+}
+
+.nave {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding: 10px;
+    grid-area: nave;
+    background-color: rgb(112, 196, 27);
+    border: 2px solid black;
+
+    border-radius: 10px;
+    /* list-style-type: none;
+    text-decoration: none; */
+    /* justify-content: space-around; */
+}
+
+.searchTerm,
+on :hover {
+    background-color: greenyellow;
+}
+
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: blanchedalmond;
+    color: #444;
+    grid-template-areas:
+
+        "nave nave nave"
+        "content1 content2 content3"
+        "footer footer footer";
+}
+
+.fig {
+    width: 100%;
+}
+
+.animal {
+    width: 50%;
+}
+
+.nav {
+    grid-area: nav;
+    background-color: burlywood;
+    border: 2px solid black;
+    border-radius: 10px;
+    /* width: 100%;
+    height: 4rem; */
+
+    justify-content: space-around;
+}
+
+.content1 {
+    grid-area: content1;
+    background-color: orange;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0.11, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border: 2px solid black;
+    /* width: 100%; */
+    border-radius: 10px;
+
+}
+
+.content2 {
+    grid-area: content2;
+    background-color: orchid;
+
+    border: 2px solid black;
+    /* width: 100%; */
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.content3 {
+    grid-area: content3;
+    background-color: coral;
+
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    background-color: grey;
+
+    border: 2px solid black;
+    justify-content: space-around;
+    list-style-type: none;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.foot {
+    list-style-type: none;
+    text-decoration: none;
+}
+            
+            .animal {
+    width: 40vh;
+    height: 100vh;
+}
+
+.btn {
+    background-color: rgb(0, 217, 255);
+    color: red;
+    align-items: center;
+}
+
+.para2 {
+    text-decoration: underline;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+/* .para {
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+} */
+
+
+ß blockquote {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+            .active {
+    display: flex;
+    /* align-items: center; */
+    list-style-type: none;
+
+    background-color: blues;
+
+    padding: 5px;
+    color: red;
+    float: left;
+
+    text-decoration: none;
+    justify-content: space-between;
+    overflow-wrap: normal;
+
+
+
+}
+
+.blg {
+    text-align: center;
+}
+
+.btn {
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        display: grid;
+        grid-gap: 10px;
+        background-color: black;
+        color: #444;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1fr auto 1fr;
+        grid-template-areas:
+            "nave"
+            "content1"
+            "content2"
+            "content3"
+            "footer";
+
+    }
+}
+        </style>   
+
+    </head>
+
+    <body>
+        <main class="container">
+
+            <navbar class="nave">
+                <a class="active" href="#">Home</a>
+                <a class="active" href="#">Search</a>
+                <a class="active" href="#">Contact</a>
+                <a class="active" href="#">Login</a>
+            </navbar>
+            <section class="content1">
+
+                <h2 class="blg">This is my Article</h2>
+
+                <figure>
+                    <img src="../images/photo-1490718720478-364a07a997cd.jpeg" class="animal" alt="Trulli">
+                    <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+                </figure>
+                <button class="btn"> click me </button>
+
+            </section>
+            <div class="content2">
+
+                <h2 class="blg">This is my Blog</h2>
+                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, sint? Aliquid nobis
+                    modi, autem
+                    enim aspernatur molestiae quam dolorum exercitationem!</p>
+
+                <button class="btn"> click me</button>
+            </div>
+            <div class="content3">
+
+                <h2 class="blg">This is my Blo</h2>
+                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, sint? Aliquid nobis
+                    modi, autem
+                    enim aspernatur molestiae quam dolorum exercitationem!</p>
+                <button class="btn"> click me</button>
+            </div>
+            <div class="footer">
+                <div class="wrap">
+                    <div class="search">
+                        <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                        <button type="submit" class="searchButton">
+                            <i class="fa fa-search">search</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </body>
+
+</html>
